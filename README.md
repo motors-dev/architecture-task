@@ -3,7 +3,8 @@
 ## Background:
 
 We have a microservice that sends emails to customers. This microservice works fine for up to 10,000 emails but starts to fail and take too long beyond that. Our services are deployed in Google Cloud (GKE) with only one instance of each microservice.
-Current Workflow:
+
+## Current Workflow:
 
 - Receive REST Call: Accepts a list of customer IDs.
 - Fetch Email Details: Calls another microservice over REST to fetch email details for each customer ID.
@@ -11,6 +12,9 @@ Current Workflow:
 - Send Email: Uses a REST call to the email transmission microservice to send each email.
 - Record Sent Status: Logs that an email has been sent for each customer.
 - Completion Log: Logs the total number of emails sent and the total processing time.
+
+![image](https://github.com/motors-dev/architecture-task/assets/170531354/abd8296e-0195-4d5e-b474-ca6b01abdc86)
+
 
 ## Known Issues:
 
